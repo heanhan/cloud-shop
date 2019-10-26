@@ -5,31 +5,36 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.8.RELEASE</version>
+        <version>2.2.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>springcloud-collections-alibaba</artifactId>
+    <artifactId>springcloud-alibaba-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcloud-collections-alibaba</name>
-    <description>springcloud-collections-alibaba project for Spring Boot</description>
+    <name>springcloud-alibaba-gateway</name>
+    <description>springcloud-alibaba-gateway project for Spring Boot</description>
 
-    <modules>
-        <module>springcloud-alibaba-provider</module>
-    </modules>
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
     </dependencies>
 
     <build>

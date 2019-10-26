@@ -31,4 +31,28 @@
         * Alibaba Cloud SMS: 覆盖全球的短信服务，友好、高效、智能的互联化通讯能力，帮助企业迅速搭建客户触达通道。
     
  ####  1、 Spring Cloud Alibaba | Nacos服务注册与发现
+        nacos 的使用
+        下载源码，然后安装到 本地的maven的仓库
+        
+            下载：git clone https://github.com/alibaba/nacos.git
+            
+            安装到本地的仓库：cd nacos/
+                     mvn -Prelease-nacos clean install -U
+        启动：分linux 版本与 windows 版本
+        linux 版本：
+            cd nacos/bin
+            ./startup.sh -m standalone
+        windows ： 
+            startup.cmd
+            
+            
+        补充：基于docker 的安装 
+            下载镜像：git clone https://github.com/nacos-group/nacos-docker.git
+            打开镜像: cd nacos-docker
+            
+          单机模式
+          docker-compose -f example/standalone-mysql.yaml up
+          集群模式
+          docker-compose -f example/cluster-hostname.yaml up 
+            
  
