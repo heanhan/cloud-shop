@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  *  consumer 的消费端
  *   添加两个注解
- *          @EnableDiscoveryClient 这个注解开启服务发现
+ *          @EnableDiscoveryClient 开启服务注册发现功能
  *          @EnableFeignClents 这个注解是声明Feign远程调用
  */
 @SpringBootApplication
