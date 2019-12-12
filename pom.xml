@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.8.RELEASE</version>
+        <version>2.1.11.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
@@ -17,11 +17,15 @@
     <!--modules-->
     <modules>
         <module>springcloud-alibaba-articles</module>
+        <module>springcloud-alibaba-consumer</module>
+        <module>springcloud-alibaba-provider</module>
+        <module>springcloud-alibaba-gateways</module>
+        <module>springcloud-alibaba-nacos-config</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
     </properties>
     <dependencyManagement>
         <dependencies>
