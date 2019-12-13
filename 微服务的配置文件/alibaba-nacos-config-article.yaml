@@ -1,0 +1,19 @@
+#配置文章微服务的信息
+server:
+  port: 9105
+
+spring:
+  application:
+    name: springcloud-alibaba-article
+  cloud:
+    #配置nacos的注册中心
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+#微服务的健康检查
+management:
+  endpoints:
+    web:
+    exposure:
+    include: "*"

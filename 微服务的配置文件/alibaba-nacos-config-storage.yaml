@@ -1,0 +1,83 @@
+#配置微服务的信息端口名称
+server:
+  port: 9710
+
+#开启对feign使用sentinel的熔断器
+feign:
+  sentinel:
+    enabled: true
+
+#微服务的健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#mybatis的配置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.example.stroage.entity.pojo
+spring:
+  #改微服务的名称
+  application:
+    name: springcloud-alibaba-stroage
+  cloud:
+    alibaba:
+      #分布式seata的事务组名称
+      seata:
+        tx-service-group: seata_tx_group
+    # nacos 作为注册中心的服务器地址
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+    #熔断器的面板设置
+    sentinel:
+      transport:
+        #熔断器的服务地址，每个集群 建议500台以下，多了，在从新开一个面板服务
+        dashboard: 127.0.0.1:9780
+        # 端口
+        port: 8719
+  #数据的连接信息以及使用druid的配置信息
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/springcloud_alibaba_storage?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    druid:
+      filters: stat
+      initial-size: 10
+      max-active: 20
+      max-pool-prepared-statement-per-connection-size: 20
+      max-wait: 60000
+      min-evictable-idle-time-millis: 300000
+      min-idle: 10
+      pool-prepared-statements: true
+      stat-view-servlet:
+        enabled: true
+        login-password: 123456
+        login-username: admin
+        reset-enable: true
+        url-pattern: /druid/*
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      validation-query: SELECT 'x'
+      web-stat-filter:
+        enabled: true
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+        principal-cookie-name: admin
+        principal-session-name: admin
+        session-stat-enable: false
+        profile-enable: true
+        session-stat-max-count: 1000
+        url-pattern: /*
+#配置日志控制
+logging:
+  level:
+    com:
+      example:
+        stroage: debug

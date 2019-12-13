@@ -1,4 +1,32 @@
 # Getting Started使用
+
+项目介绍：
+
+    1. 运行环境：
+        springboot2.1.11.RELEASE
+        jdk8、
+        maven 3.6.1、
+        idea2019.1.2、
+        springcloud Greenwich.SR3、
+        spring-cloud-alibaba-dependencies 2.1.0.RELEASE
+        nacos 0.9
+        seata 0.9
+        
+    2. 需要seata-server 与nacos
+        地址：
+            seata-server: https://github.com/seata/seata/releases
+            nacos:  https://github.com/alibaba/nacos/releases
+    
+    3. 配置seata作为分布式项目的分布式事务的解决方案
+        参照官方文档，
+        
+    4. 项目涉及的sql 
+        a.  seata 基于持久化话到关系数据库mysql的建表语句在父项目下seata.sql
+        b.  每个项目设计的sql都放置在每个项目的resouce中下
+    
+    
+
+
 使用Spring Cloud Alibaba 作为微服务的解决方案
 
 1 . 注册中心使用 Nacos
