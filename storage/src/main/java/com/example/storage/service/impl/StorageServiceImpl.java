@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.Resource;
+
 /**
  * @author : zhaojh
  * @date : 2024-04-30
@@ -18,7 +20,7 @@ public class StorageServiceImpl implements StorageService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StorageServiceImpl.class);
 
-    @Autowired
+    @Resource
     private StorageMapper storageMapper;
 
     /**

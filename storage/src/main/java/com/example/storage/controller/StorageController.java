@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 /**
  * @author : zhaojh
  * @date : 2024-04-30
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("storage")
 public class StorageController {
 
-    @Autowired
+    @Resource
     private StorageService storageServiceImpl;
 
     /**

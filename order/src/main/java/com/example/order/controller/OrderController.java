@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 
 /**
@@ -20,7 +21,7 @@ import java.math.BigDecimal;
 @RequestMapping(value = "/order")
 public class OrderController {
 
-    @Autowired
+    @Resource
     private OrderService orderServiceImpl;
 
     /**
