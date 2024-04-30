@@ -1,16 +1,16 @@
 package com.example.account.controller;
 
 import com.example.account.service.AccountService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 
 /**
  * @author : zhaojh
- * @date : 2019-12-12
+ * @date : 2024-04-30
  * @function :
  */
 
@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 @RequestMapping("/account")
 public class AccountController {
 
-    @Autowired
+    @Resource
     private AccountService accountServiceImpl;
 
     /**

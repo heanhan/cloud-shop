@@ -12,8 +12,9 @@
     <artifactId>consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>consumer</name>
+    <packaging>jar</packaging>
 
+    <name>consumer</name>
 
     <dependencies>
 
