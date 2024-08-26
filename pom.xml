@@ -17,15 +17,24 @@
 
     <!--modules-->
     <modules>
+        <!--公共模块-涉及公共的工具类、starter等-->
         <module>common-module</module>
+        <!--门户首页-->
         <module>portal</module>
+        <!--用户中心 user  account center-->
         <module>uac</module>
+        <!--银行账号-->
         <module>account</module>
-        <module>commodity</module>
+        <!--网关-->
         <module>gateways</module>
-        <module>logistics</module>
+        <!--订单-->
         <module>order</module>
+        <!--库存-->
         <module>storage</module>
+        <!--物流模块-->
+        <module>logistics</module>
+        <!--商品模块-->
+        <module>commodity</module>
 
     </modules>
 
