@@ -1,0 +1,7 @@
+server:
+  port: 9012
+  servlet:
+    context-path: /commodity
+spring:
+  application:
+    name: commodity-service

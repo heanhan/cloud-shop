@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>springcloud-collections-alibaba</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>cloud-shop</artifactId>
+        <version>1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>gateways</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
 
     <packaging>jar</packaging>
 

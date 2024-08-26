@@ -1,6 +1,6 @@
 package com.example.order.service;
 
-import com.example.order.entity.pojo.Order;
+import com.example.order.entity.Order;
 
 import java.math.BigDecimal;
 

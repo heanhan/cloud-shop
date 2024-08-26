@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>springcloud-collections-alibaba</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>cloud-shop</artifactId>
+        <version>1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>order</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
 
     <packaging>jar</packaging>
 
@@ -18,23 +18,12 @@
 
 
     <dependencies>
+        <!--封装的starter 的web组件-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>com.example</groupId>
+            <artifactId>common-web-starter</artifactId>
+            <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-
 
         <!--nacos 配置中心的pom-->
         <dependency>
@@ -73,11 +62,9 @@
             <version>1.2.20</version>
         </dependency>
 
-        <!--mybatis的分页插件-->
         <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.4.7</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
 

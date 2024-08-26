@@ -3,26 +3,28 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>springcloud-collections-alibaba</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>cloud-shop</artifactId>
+        <version>1.0</version>
     </parent>
 
     <artifactId>logistics</artifactId>
     <packaging>jar</packaging>
 
     <name>logistics</name>
-    <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+        <!--封装的starter 的web组件-->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>com.example</groupId>
+            <artifactId>common-web-starter</artifactId>
+            <version>1.0</version>
         </dependency>
+
     </dependencies>
+
+
 </project>

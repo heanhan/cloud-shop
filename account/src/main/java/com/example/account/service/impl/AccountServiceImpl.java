@@ -1,7 +1,7 @@
 package com.example.account.service.impl;
 
+import com.example.account.dao.AccountDao;
 import com.example.account.feign.OrderFeign;
-import com.example.account.mapper.AccountMapper;
 import com.example.account.service.AccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ public class AccountServiceImpl implements AccountService {
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountServiceImpl.class);
 
     @Resource
-    private AccountMapper accountMapper;
+    private AccountDao accountMapper;
 
     @Resource
     private OrderFeign orderFeign;
@@ -41,7 +41,7 @@ public class AccountServiceImpl implements AccountService {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-        accountMapper.decrease(userId,money);
+//        accountMapper.decrease(userId,money);
         LOGGER.info("------->扣减账户结束account中");
 
         //修改订单状态，此调用会导致调用成环

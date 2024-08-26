@@ -1,7 +1,6 @@
 package com.example.storage.controller;
 
 import com.example.storage.service.StorageService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,12 +9,12 @@ import javax.annotation.Resource;
 
 /**
  * @author : zhaojh
- * @date : 2024-04-30
+ * @date : 2024-08-08
  * @function :
  */
 
 @RestController
-@RequestMapping("storage")
+@RequestMapping("/storage")
 public class StorageController {
 
     @Resource
@@ -27,7 +26,7 @@ public class StorageController {
      * @param count 数量
      * @return
      */
-    @RequestMapping("decrease")
+    @RequestMapping("/decrease")
     public String decrease(@RequestParam("productId") Long productId, @RequestParam("count") Integer count){
         storageServiceImpl.decrease(productId,count);
         return "Decrease storage success";

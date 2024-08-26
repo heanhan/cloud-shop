@@ -4,31 +4,23 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>springcloud-collections-alibaba</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>cloud-shop</artifactId>
+        <version>1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>storage</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>storage</name>
 
     <dependencies>
+        <!--封装的starter 的web组件-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
+            <groupId>com.example</groupId>
+            <artifactId>common-web-starter</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <!--nacos 配置中心的pom-->
@@ -69,9 +61,8 @@
         </dependency>
 
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>3.0.3</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
 
