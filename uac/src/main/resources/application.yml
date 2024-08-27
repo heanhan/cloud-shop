@@ -5,11 +5,14 @@ server:
 spring:
   application:
     name: uac
+  #解决循环依赖
+  main:
+    allow-circular-references: true
   #数据的连接信息以及使用druid的配置信息
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://172.16.75.105:3306/cloud_oauth?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://172.16.75.105:3306/tenant_sysytem?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
     username: root
     password: abcd@123456
     druid:
