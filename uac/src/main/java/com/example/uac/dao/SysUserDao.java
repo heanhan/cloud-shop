@@ -1,12 +1,12 @@
 package com.example.uac.dao;
 
-import com.example.uac.entity.SystemUser;
+import com.example.uac.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SystemUserDao extends JpaRepository<SystemUser, Long>, JpaSpecificationExecutor<SystemUser> {
+public interface SysUserDao extends JpaRepository<User, Integer>, JpaSpecificationExecutor<User> {
 
 
     /**
@@ -14,5 +14,5 @@ public interface SystemUserDao extends JpaRepository<SystemUser, Long>, JpaSpeci
      * @param username
      * @return
      */
-    SystemUser findByUsername(String username);
+    User findByUsername(String username);
 }
