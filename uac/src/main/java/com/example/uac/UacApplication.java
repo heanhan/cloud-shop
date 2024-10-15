@@ -7,7 +7,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * 用户认证授权中心
- *
  */
 @SpringBootApplication
 public class UacApplication
@@ -18,6 +17,10 @@ public class UacApplication
     }
 
 
+    /**
+     * 密码加密工具
+     * @return BCryptPasswordEncoder 密码器
+     */
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();

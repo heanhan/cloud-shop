@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * token的校验
  * OncePerRequestFilter， 确保在一次请求只通过一次filter，而不需要重复执行，
- * 从http头的Authorization 项读取token数据，然后用Jwts包提供的方法校验token的合法性。
+ * 从http头的Authorization 项读取token数据，然后用Jwt包提供的方法校验token的合法性。
  * 如果校验通过，就认为这是一个取得授权的合法请求
  *
  * @author lwj on 2017/9/13.

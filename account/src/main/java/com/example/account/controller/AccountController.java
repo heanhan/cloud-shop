@@ -32,4 +32,9 @@ public class AccountController {
         accountServiceImpl.decrease(userId,money);
         return "Account decrease success";
     }
+
+    /**
+     * 创建账号
+     */
+
 }
